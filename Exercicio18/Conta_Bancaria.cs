@@ -13,7 +13,7 @@ namespace Exercicio18
         {
             get; set;
         }
-        public double Saldo { get; set; }
+        public double Saldo { get; protected set; }
         public abstract void Deposito(double valor);
         public abstract void Saque(double valor);
 

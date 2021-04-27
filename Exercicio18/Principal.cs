@@ -18,7 +18,7 @@ namespace Exercicio18
         }
 
 
-        private void btnCcorrente_Click(object sender, EventArgs e)
+        private void BtnCcorrente_Click(object sender, EventArgs e)
         {
            
             try
@@ -36,7 +36,7 @@ namespace Exercicio18
                 {
                     NomeCliente = txtNomeCC.Text,
                     NumerodaConta = maskedCC.Text,
-                    Saldo = Convert.ToDouble(saldoCC.Text),
+                    
                     LimiteCredito = Convert.ToDouble(LimiteCC.Text),
 
 
@@ -54,6 +54,8 @@ namespace Exercicio18
             {
                 MessageBox.Show(erro.ToString(), "ERRO!", MessageBoxButtons.OK);
             }
+
+            Limpar(this);
 
         }
 
@@ -77,7 +79,7 @@ namespace Exercicio18
                 {
                     NomeCliente = txtNomeCP.Text,
                     NCCorrenteAtrelada = maskedCp.Text,
-                    Saldo = Convert.ToDouble(SaldoCP.Text),
+                   
                     Diadeaniversario = Convert.ToInt32(numericUpDown1.Value),
 
 
@@ -94,10 +96,11 @@ namespace Exercicio18
             {
                 MessageBox.Show(erro.ToString(), "ERRO!", MessageBoxButtons.OK);
             }
+            Limpar(this);
 
         }
 
-        private void btnSaque_Click(object sender, EventArgs e)
+        private void BtnSaque_Click(object sender, EventArgs e)
         { //LAMBDA
             try
             {
@@ -145,7 +148,7 @@ namespace Exercicio18
             }
             else
             {
-                pesquisa.Saldo += Convert.ToDouble(txtValor.Text);
+                pesquisa.Deposito(Convert.ToDouble(txtValor.Text));
                 MessageBox.Show($"Feito, seu novo saldo é de {pesquisa.Saldo}");
 
             }
@@ -198,6 +201,21 @@ namespace Exercicio18
 
         private void LimiteCC_TextChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void Limpar(Control clean)
+        {
+
+            if (clean is TextBoxBase)
+            {
+                (clean as TextBoxBase).Clear();
+            }
+            foreach (Control control in clean.Controls)
+            {
+                Limpar(control);
+            }
+
 
         }
     }

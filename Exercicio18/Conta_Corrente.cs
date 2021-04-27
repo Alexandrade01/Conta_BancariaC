@@ -29,7 +29,7 @@ namespace Exercicio18
 
         public override string ToString()
         {
-            return base.ToString() + Environment.NewLine + "Limite de crédito: R$" + LimiteCredito.ToString("0.00")+ Environment.NewLine+ "Utiliza talão?: " + UtilizaTalaoCheque.ToString();
+            return base.ToString() + Environment.NewLine + "Limite de crédito: R$" + LimiteCredito.ToString("0.00")+ Environment.NewLine+ (UtilizaTalaoCheque ? "Sim":"Não");
         }
 
     }

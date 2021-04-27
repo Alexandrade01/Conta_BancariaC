@@ -109,6 +109,7 @@ namespace Exercicio18
             // 
             this.saldoCC.Location = new System.Drawing.Point(155, 129);
             this.saldoCC.Name = "saldoCC";
+            this.saldoCC.ReadOnly = true;
             this.saldoCC.Size = new System.Drawing.Size(111, 23);
             this.saldoCC.TabIndex = 3;
             // 
@@ -210,7 +211,7 @@ namespace Exercicio18
             this.btnCcorrente.TabIndex = 5;
             this.btnCcorrente.Text = "Cadastrar";
             this.btnCcorrente.UseVisualStyleBackColor = true;
-            this.btnCcorrente.Click += new System.EventHandler(this.btnCcorrente_Click);
+            this.btnCcorrente.Click += new System.EventHandler(this.BtnCcorrente_Click);
             // 
             // groupBox3
             // 
@@ -250,6 +251,7 @@ namespace Exercicio18
             // 
             this.SaldoCP.Location = new System.Drawing.Point(155, 129);
             this.SaldoCP.Name = "SaldoCP";
+            this.SaldoCP.ReadOnly = true;
             this.SaldoCP.Size = new System.Drawing.Size(111, 23);
             this.SaldoCP.TabIndex = 8;
             // 
@@ -318,7 +320,7 @@ namespace Exercicio18
             this.btnSaque.TabIndex = 13;
             this.btnSaque.Text = "Saque";
             this.btnSaque.UseVisualStyleBackColor = true;
-            this.btnSaque.Click += new System.EventHandler(this.btnSaque_Click);
+            this.btnSaque.Click += new System.EventHandler(this.BtnSaque_Click);
             // 
             // groupBox4
             // 
